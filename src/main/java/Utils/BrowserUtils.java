@@ -65,8 +65,6 @@ public static void switchOnlyforTwoTabs(WebDriver driver, String mainPageId){
         }
     }
 }
-
-
     public static void switchByTitle(WebDriver driver, String title){
         Set <String> lists=driver.getWindowHandles();
         for(String page:lists){
