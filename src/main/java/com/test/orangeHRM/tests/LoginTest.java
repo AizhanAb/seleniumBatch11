@@ -1,5 +1,6 @@
 package com.test.orangeHRM.tests;
 
+import Utils.ConfigReader;
 import com.test.orangeHRM.TestBase;
 import com.test.orangeHRM.pages.LoginPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -17,7 +18,7 @@ public class LoginTest extends TestBase {
     public void validateLoginPositive(){
 
     LoginPage loginPage=new LoginPage(driver);
-    loginPage.loginMethod("Admin", "admin123");
+    loginPage.loginMethod(ConfigReader.readProperty("orangehrmusername"), ConfigReader.readProperty("orangehrmpassword"));
 
     String actualUrl = driver.getCurrentUrl();
 

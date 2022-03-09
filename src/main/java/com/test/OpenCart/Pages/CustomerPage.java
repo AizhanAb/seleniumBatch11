@@ -5,13 +5,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class logInPage {
-    public logInPage(WebDriver driver){
+public class CustomerPage {
+    public CustomerPage(WebDriver driver) {
         PageFactory.initElements(driver, this);
     }
-    @FindBy(tagName="button")
-    WebElement button;
-    public void clickButton(){
-        button.click();
-    }
+
 }
